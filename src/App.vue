@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="main">
+    <h1>Monster Slayer</h1>
+    <player-life />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+  import PlayerLife from './components/PlayerLife'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    PlayerLife
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style scoped>
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  width: 100%;
+  background-color: brown;
+  color: white;
+  padding: 10px;
+  margin: 0;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
